@@ -1,0 +1,47 @@
+{
+  "args": {
+    "dim": 1,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 3,
+    "ny": 3,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "method": "SD",
+    "depth": 4,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 111,
+    "stages": "300:1048576",
+    "lr": null,
+    "device": "auto",
+    "noise_from": "sherbrooke",
+    "screen": 16,
+    "init_seed": 29,
+    "init_file": null,
+    "mitigate": "readout",
+    "out": "/home/icelion/Project/QPDEs/HQC_MG/QuantumConfienment/reproduction/figs/data/prod/r_1d_N32_noisy_mitRO"
+  },
+  "label": "1D box N=32, u0=0.0 eV",
+  "lam_min": 0.009056154853830893,
+  "init": {
+    "seed": 29,
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "SD": {
+      "energy": 0.009761557481602234,
+      "L2": 0.03462731534178609,
+      "trace": 0.03462212496328429,
+      "evals": 300
+    }
+  },
+  "time_s": {
+    "SD": 3213.348121137009
+  },
+  "best_trace": {
+    "SD": 0.017607942244529575
+  }
+}

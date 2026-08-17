@@ -1,0 +1,38 @@
+{
+  "args": {
+    "dim": 2,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 5,
+    "ny": 5,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "method": "SD",
+    "depth": 8,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 222,
+    "stages": "200:0.05:65536,100:0.02:262144",
+    "device": "auto",
+    "noise_from": null,
+    "screen": 16,
+    "init_seed": 13,
+    "out": "outputs/sd32_i13_crn222"
+  },
+  "label": "2D box 32x32, t1=5.263, t2=1.020",
+  "lam_min": 0.056904947255541335,
+  "init": {
+    "seed": 13,
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "SD": {
+      "energy": 0.0696197468936927,
+      "L2": 0.10027526094384173,
+      "trace": 0.1001491465654812,
+      "evals": 301
+    }
+  }
+}

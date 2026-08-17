@@ -1,0 +1,59 @@
+{
+  "args": {
+    "dim": 1,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 3,
+    "ny": 3,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "nz": 3,
+    "t3": 1.0,
+    "method": "SD,FD",
+    "depth": 4,
+    "shots": 1048576,
+    "maxiter": 3000,
+    "optimizer": "COBYLA",
+    "seed": 111,
+    "stages": null,
+    "lr": null,
+    "device": "auto",
+    "noise_from": null,
+    "screen": 16,
+    "init_seed": null,
+    "init_file": null,
+    "mitigate": null,
+    "resume": false,
+    "parallel": "auto",
+    "out": "/tmp/claude-1000/-home-icelion-Project-QPDEs-HQC-MG/e0add2e6-9e7f-4eb8-9f4a-e9ebb8556def/scratchpad/cobyla/cobyla_screened"
+  },
+  "label": "1D box N=32, u0=0.0 eV",
+  "lam_min": 0.009056154853830893,
+  "init": {
+    "seed": 1,
+    "classical_trace": 0.06140358104223216,
+    "screened": true
+  },
+  "terminal": {
+    "SD": {
+      "energy": 0.018865367698389944,
+      "L2": 0.1118410072914136,
+      "trace": 0.1116660012092835,
+      "evals": 543
+    },
+    "FD": {
+      "energy": 0.013025518030542674,
+      "L2": 0.06477115392588413,
+      "trace": 0.0647371781928557,
+      "evals": 504
+    }
+  },
+  "time_s": {
+    "SD": 357.07974591699895,
+    "FD": 128.80729809904005
+  },
+  "best_trace": {
+    "SD": 0.10910521258787743,
+    "FD": 0.06354157748201221
+  }
+}

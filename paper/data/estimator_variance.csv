@@ -1,0 +1,7 @@
+method,state,mean,std
+SD,plateau,12.691251,0.028895
+SD,ground,0.214780,0.016236
+FD,plateau,12.683962,0.042158
+FD,ground,0.214010,0.007363
+PO,plateau,12.693384,0.028141
+PO,ground,0.214335,0.005016

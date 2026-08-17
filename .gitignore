@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+outputs/
+paper/figures/
+*.egg-info/
+.ipynb_checkpoints/

@@ -1,0 +1,14 @@
+1D n=5 d4 | lam_min=0.00906 | 200 steps @ 8192 shots | noise=sherbrooke
+  SD  ideal: trace 0.786 -> end 0.0757 | min 0.0545 [1.1min]
+  SD  noisy: trace 0.786 -> end 0.1066 | min 0.0693 [5.3min]
+  PO  ideal: trace 0.786 -> end 0.0508 | min 0.0462 [0.6min]
+  PO  noisy: trace 0.786 -> end 0.2056 | min 0.1322 [5.1min]
+  FD  ideal: trace 0.786 -> end 0.0637 | min 0.0637 [0.7min]
+  FD  noisy: trace 0.786 -> end 0.3205 | min 0.0822 [6.0min]
+
+=== summary: end trace ===
+method     ideal    noisy  noise penalty
+SD        0.0757   0.1066           1.4x
+PO        0.0508   0.2056           4.0x
+FD        0.0637   0.3205           5.0x
+NOISE_TRAIN_DONE

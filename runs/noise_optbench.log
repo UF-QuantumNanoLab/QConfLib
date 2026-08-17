@@ -1,0 +1,4 @@
+PS+Adam : 200 steps | end trace 0.1066 | best 0.0693 [5.2min]
+COBYLA  : 160 evals | end trace 0.9256 | best 0.7715 [2.2min]
+SPSA    : 4000 steps | end trace 0.1162 | best 0.0989 [110.8min]
+NOISE_OPTBENCH_DONE

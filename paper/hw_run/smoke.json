@@ -1,0 +1,6 @@
+{
+ "job_id": "d9mae5furbec73e5jg5g",
+ "backend": "ibm_kingston",
+ "shots": 2048,
+ "seed_transpiler": 42
+}

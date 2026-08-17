@@ -1,0 +1,46 @@
+{
+  "args": {
+    "dim": 2,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 4,
+    "ny": 4,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "method": "FD",
+    "depth": 8,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 111,
+    "stages": "300:1048576",
+    "lr": null,
+    "device": "auto",
+    "noise_from": "sherbrooke",
+    "screen": 16,
+    "init_seed": null,
+    "init_file": "figs/data/sine_init_8q_d8.npy",
+    "out": "/home/icelion/Project/QPDEs/HQC_MG/QuantumConfienment/reproduction/figs/data/prod/r_2d_16x16_noisy_FDsine"
+  },
+  "label": "2D box 16x16, t1=5.263, t2=1.020",
+  "lam_min": 0.2139793057984418,
+  "init": {
+    "init_file": "figs/data/sine_init_8q_d8.npy",
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "FD": {
+      "energy": 11.587903194993096,
+      "L2": 1.353050787300627,
+      "trace": 0.999998385692365,
+      "evals": 300
+    }
+  },
+  "time_s": {
+    "FD": 7770.7310144509975
+  },
+  "best_trace": {
+    "FD": 0.0002793275473190373
+  }
+}

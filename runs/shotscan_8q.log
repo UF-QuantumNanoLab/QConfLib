@@ -1,0 +1,3 @@
+8q (2D 16x16) FD shot scan | anchors: classical escape@81 conv, FD 2^20 escape@153 end 0.78
+FD 2^21: escape@103 | @100 0.924 | end 0.0802 | min 0.0802 [33.7s/step, 101min]
+FD 2^22: escape@89 | @100 0.726 | end 0.2128 | min 0.2128 [65.3s/step, 196min]

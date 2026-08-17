@@ -1,0 +1,186 @@
+{
+ "shots": 8192,
+ "seed_transpiler": 42,
+ "targets": {
+  "fez": {
+   "backend": "fake_fez",
+   "n_circuits": 66,
+   "measured_phys_qubits": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    56,
+    86,
+    87,
+    88,
+    89,
+    90,
+    123,
+    124,
+    125,
+    126,
+    127,
+    136,
+    140,
+    141,
+    142,
+    143,
+    144,
+    147
+   ],
+   "blocks": {
+    "B_1d": {
+     "n": 10,
+     "q2_med": 18,
+     "q2_max": 121,
+     "depth_med": 44,
+     "depth_max": 372
+    },
+    "C_1d_repeat": {
+     "n": 10,
+     "q2_med": 18,
+     "q2_max": 121,
+     "depth_med": 44,
+     "depth_max": 372
+    },
+    "D_2d": {
+     "n": 15,
+     "q2_med": 75,
+     "q2_max": 203,
+     "depth_med": 97,
+     "depth_max": 412
+    },
+    "E_3d": {
+     "n": 16,
+     "q2_med": 66,
+     "q2_max": 80,
+     "depth_med": 94,
+     "depth_max": 133
+    },
+    "F_excited": {
+     "n": 3,
+     "q2_med": 64,
+     "q2_max": 72,
+     "depth_med": 91,
+     "depth_max": 96
+    },
+    "G_1d_ddtwirl": {
+     "n": 10,
+     "q2_med": 18,
+     "q2_max": 121,
+     "depth_med": 44,
+     "depth_max": 372
+    }
+   },
+   "qpu_minutes_est": [
+    1.35,
+    2.7
+   ]
+  },
+  "kingston": {
+   "backend": "fake_kingston",
+   "n_circuits": 66,
+   "measured_phys_qubits": [
+    0,
+    2,
+    3,
+    16,
+    20,
+    21,
+    22,
+    23,
+    36,
+    41,
+    42,
+    55,
+    59,
+    71,
+    74,
+    75,
+    79,
+    87,
+    88,
+    89,
+    90,
+    91,
+    93,
+    98,
+    108,
+    109,
+    110,
+    111,
+    142,
+    143,
+    144
+   ],
+   "blocks": {
+    "B_1d": {
+     "n": 10,
+     "q2_med": 18,
+     "q2_max": 121,
+     "depth_med": 45,
+     "depth_max": 369
+    },
+    "C_1d_repeat": {
+     "n": 10,
+     "q2_med": 18,
+     "q2_max": 121,
+     "depth_med": 45,
+     "depth_max": 369
+    },
+    "D_2d": {
+     "n": 15,
+     "q2_med": 75,
+     "q2_max": 203,
+     "depth_med": 97,
+     "depth_max": 413
+    },
+    "E_3d": {
+     "n": 16,
+     "q2_med": 66,
+     "q2_max": 80,
+     "depth_med": 94,
+     "depth_max": 133
+    },
+    "F_excited": {
+     "n": 3,
+     "q2_med": 64,
+     "q2_max": 72,
+     "depth_med": 91,
+     "depth_max": 97
+    },
+    "G_1d_ddtwirl": {
+     "n": 10,
+     "q2_med": 18,
+     "q2_max": 121,
+     "depth_med": 45,
+     "depth_max": 369
+    }
+   },
+   "qpu_minutes_est": [
+    1.35,
+    2.7
+   ]
+  }
+ },
+ "block_order": [
+  "B_1d",
+  "C_1d_repeat",
+  "D_2d",
+  "E_3d",
+  "F_excited",
+  "G_1d_ddtwirl"
+ ],
+ "theta_sources": {
+  "B/C/G": "prod/r_1d_N32_params_classical.csv",
+  "D": "prod/r_2d_32x32_staged_params_classical.csv",
+  "E": "prod/r_3d_8x8x8_params_classical.csv",
+  "F": [
+   "hw_run/theta1_1d_u01.csv (noiseless-VQD refit)",
+   "vqd23d/2d_32x32_excited_shotSD_params.csv",
+   "vqd23d/3d_8x8x8_excited_shotSD_params.csv"
+  ]
+ }
+}

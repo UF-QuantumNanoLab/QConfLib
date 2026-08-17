@@ -1,0 +1,10 @@
+# For CUDA acceleration, OPTIONALLY replace qiskit-aer with the GPU build:
+#   pip install env/qiskit_aer-0.17.2-cp311-cp311-linux_x86_64.whl   (Py3.11/linux/sm_86)
+# or build for your GPU arch:  CUDA_ARCH=8.9 bash env/build_aer_gpu.sh
+qiskit>=2.0
+qiskit-aer>=0.17
+qiskit-ibm-runtime>=0.40
+numpy
+scipy
+matplotlib
+qiskit-algorithms>=0.3

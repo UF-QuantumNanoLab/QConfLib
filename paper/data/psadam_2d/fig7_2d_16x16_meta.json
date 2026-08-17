@@ -1,0 +1,50 @@
+{
+  "args": {
+    "dim": 2,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 4,
+    "ny": 4,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "method": "classical,SD,FD",
+    "depth": 8,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 111,
+    "stages": "200:0.05:65536,100:0.02:262144",
+    "device": "auto",
+    "noise_from": null,
+    "screen": 16,
+    "init_seed": 10,
+    "out": "outputs/fig7_2d_16x16"
+  },
+  "label": "2D box 16x16, t1=5.263, t2=1.020",
+  "lam_min": 0.2139793057984418,
+  "init": {
+    "seed": 10,
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "classical": {
+      "energy": 0.21401094769034118,
+      "L2": 0.0025309216254201516,
+      "trace": 0.00253091959907581,
+      "evals": 301
+    },
+    "SD": {
+      "energy": 0.21539294474338225,
+      "L2": 0.019728371779281512,
+      "trace": 0.019727411949287635,
+      "evals": 301
+    },
+    "FD": {
+      "energy": 0.2185196600055595,
+      "L2": 0.028461173472014493,
+      "trace": 0.028458291495682696,
+      "evals": 301
+    }
+  }
+}

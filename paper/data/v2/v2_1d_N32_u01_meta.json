@@ -1,0 +1,61 @@
+{
+  "args": {
+    "dim": 1,
+    "n": 5,
+    "u0": 1.0,
+    "nx": 3,
+    "ny": 3,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "method": "classical,SD,FD",
+    "depth": 4,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 111,
+    "stages": null,
+    "lr": null,
+    "device": "auto",
+    "noise_from": null,
+    "screen": 16,
+    "init_seed": 11,
+    "out": "outputs/v2_1d_N32_u01"
+  },
+  "label": "1D box N=32, u0=1.0 eV",
+  "lam_min": 0.1531790294805006,
+  "init": {
+    "seed": 11,
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "classical": {
+      "energy": 0.15318059687155824,
+      "L2": 0.0014148298641092688,
+      "trace": 0.001414829510047477,
+      "evals": 300
+    },
+    "SD": {
+      "energy": 0.1534205222227377,
+      "L2": 0.017355308218406723,
+      "trace": 0.01735465476415747,
+      "evals": 300
+    },
+    "FD": {
+      "energy": 0.1533033246747147,
+      "L2": 0.011878834296048559,
+      "trace": 0.011878624771294215,
+      "evals": 300
+    }
+  },
+  "time_s": {
+    "classical": 0.7527661679923767,
+    "SD": 1226.3013004380045,
+    "FD": 643.6987629939977
+  },
+  "best_trace": {
+    "classical": 0.0014158198623471778,
+    "SD": 0.006428765155823202,
+    "FD": 0.010195530621978078
+  }
+}

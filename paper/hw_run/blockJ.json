@@ -1,0 +1,20 @@
+{
+ "job_id": "d9nm9lk60llc73ca95ig",
+ "backend": "ibm_kingston",
+ "shots": 65536,
+ "cal_shots": 16384,
+ "phys": [
+  109,
+  110,
+  118,
+  128,
+  129
+ ],
+ "provenance": [
+  "noiseless",
+  "kingston_raw",
+  "kingston_mitRO",
+  "sherbrooke"
+ ],
+ "seed_transpiler": 42
+}

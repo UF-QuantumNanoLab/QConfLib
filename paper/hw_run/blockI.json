@@ -1,0 +1,20 @@
+{
+ "job_id": "d9nltc460llc73ca8or0",
+ "backend": "ibm_kingston",
+ "levels": [
+  256,
+  1024,
+  4096,
+  16384,
+  65536
+ ],
+ "cal_shots": 16384,
+ "phys": [
+  109,
+  110,
+  118,
+  128,
+  129
+ ],
+ "seed_transpiler": 42
+}

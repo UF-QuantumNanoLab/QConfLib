@@ -1,0 +1,10 @@
+[QConfLib] 2D box 32x32, t1=5.263, t2=1.020  (10 qubits)  lam_min=0.05690
+[QConfLib] depth=8 optimizer=Adam lr=0.05 stages=((100, 65536), (100, 262144), (100, 1048576)) density-shots=1048576 backend=ideal auto
+[QConfLib] init: seed=13 (given, screening skipped)
+  classical:  300 iters | E=+0.05884 (lam_min=+0.05690) | L2=0.0205 | trace=0.0205 |     1.9s
+  SD       :  300 iters | E=+0.05884 (lam_min=+0.05690) | L2=0.0503 | trace=0.0503 |  7273.5s
+  FD       :  300 iters | E=+0.06064 (lam_min=+0.05690) | L2=0.0365 | trace=0.0366 |  2917.7s
+[QConfLib] saved outputs/r_2d_32x32_staged_convergence.png
+[QConfLib] saved outputs/r_2d_32x32_staged_density.png
+[QConfLib] saved params/density/history CSVs + meta.json with prefix outputs/r_2d_32x32_staged_
+DONE

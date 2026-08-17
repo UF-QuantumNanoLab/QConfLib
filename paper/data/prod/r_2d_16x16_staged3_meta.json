@@ -1,0 +1,67 @@
+{
+  "args": {
+    "dim": 2,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 4,
+    "ny": 4,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "nz": 3,
+    "t3": 1.0,
+    "method": "classical,SD,FD",
+    "depth": 8,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 111,
+    "stages": "100:65536,100:262144,100:1048576",
+    "lr": null,
+    "device": "auto",
+    "noise_from": null,
+    "screen": 16,
+    "init_seed": 28,
+    "init_file": null,
+    "mitigate": null,
+    "resume": false,
+    "parallel": "auto",
+    "out": "/home/icelion/Project/QPDEs/HQC_MG/QuantumConfienment/reproduction/figs/data/prod/r_2d_16x16_staged3"
+  },
+  "label": "2D box 16x16, t1=5.263, t2=1.020",
+  "lam_min": 0.2139793057984418,
+  "init": {
+    "seed": 28,
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "classical": {
+      "energy": 0.21398311792107125,
+      "L2": 0.0007770919059871007,
+      "trace": 0.0007770918478898992,
+      "evals": 300
+    },
+    "SD": {
+      "energy": 0.5638383494304421,
+      "L2": 0.5993094507000039,
+      "trace": 0.6714462095512912,
+      "evals": 300
+    },
+    "FD": {
+      "energy": 0.22491306102180547,
+      "L2": 0.05091364209648554,
+      "trace": 0.05099136568616919,
+      "evals": 300
+    }
+  },
+  "time_s": {
+    "classical": 1.060389304999262,
+    "SD": 4470.984223660984,
+    "FD": 2247.990810207004
+  },
+  "best_trace": {
+    "classical": 0.0007616824167314709,
+    "SD": 0.6740506923502785,
+    "FD": 0.04918583010876729
+  }
+}

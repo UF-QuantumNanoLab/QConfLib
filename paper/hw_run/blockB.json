@@ -1,0 +1,18 @@
+{
+ "job_id": "d9n3vqgqs0bc73e2vmd0",
+ "backend": "ibm_kingston",
+ "shots": 8192,
+ "phys": [
+  21,
+  22,
+  23,
+  36,
+  82,
+  136,
+  140,
+  141,
+  142,
+  143
+ ],
+ "seed_transpiler": 42
+}

@@ -1,0 +1,51 @@
+{
+  "args": {
+    "dim": 1,
+    "n": 5,
+    "u0": 0.0,
+    "nx": 3,
+    "ny": 3,
+    "t1": 5.2631578947368425,
+    "t2": 1.0204081632653061,
+    "nz": 3,
+    "t3": 1.0,
+    "method": "PO",
+    "depth": 4,
+    "shots": 1048576,
+    "maxiter": 300,
+    "optimizer": "Adam",
+    "seed": 111,
+    "stages": "300:1048576",
+    "lr": null,
+    "device": "auto",
+    "noise_from": null,
+    "screen": 16,
+    "init_seed": 29,
+    "init_file": null,
+    "mitigate": null,
+    "resume": false,
+    "parallel": "auto",
+    "out": "figs/data/prod/r_1d_N32_PO"
+  },
+  "label": "1D box N=32, u0=0.0 eV",
+  "lam_min": 0.009056154853830893,
+  "init": {
+    "seed": 29,
+    "classical_trace": null,
+    "screened": false
+  },
+  "terminal": {
+    "PO": {
+      "energy": 0.009095205804850647,
+      "L2": 0.013921279184457146,
+      "trace": 0.013920941933873703,
+      "evals": 300
+    }
+  },
+  "time_s": {
+    "PO": 831.8825887950079
+  },
+  "best_trace": {
+    "PO": 0.003333812503096696
+  }
+}
