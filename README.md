@@ -1,6 +1,6 @@
 # QConfLib
 
-**QConfLib** is an open-source Python library for quantum-computing-based simulation of quantum confinement in semiconductor nanostructures. Built on **Qiskit**, it implements variational quantum algorithms for solving the discretized effective-mass Schrödinger equation in **one, two, and three dimensions**, including quantum wells (1D), nanowire cross sections (2D), and quantum dots (3D). Both ground and first excited states are supported, together with anisotropic effective masses and spatially varying electrostatic potentials.
+**QConfLib** is an open-source Python library for quantum-computing-based simulation of quantum confinement in semiconductor nanostructures. Built on **Qiskit**, it implements variational quantum algorithms (VQAs) for solving the discretized effective-mass Schrödinger equation in **one, two, and three dimensions**, including quantum wells (1D), nanowire cross sections (2D), and quantum dots (3D). Both ground and first excited states are supported, together with anisotropic effective masses and spatially varying electrostatic potentials.
 
 The confinement Hamiltonian is discretized on a uniform finite-difference grid and encoded using a qubit register whose size grows logarithmically with the number of grid points. The trial wave function is represented by a hardware-efficient parameterized quantum circuit, and its energy is minimized through a quantum-classical variational optimization procedure. Excited states are obtained using variational quantum deflation (VQD).
 
@@ -28,15 +28,16 @@ This implementation builds on and extends the following works:
 
 ## Features
 
-- Hybrid VQA framework for confinement eigenproblems in 1D / 2D / 3D
-- Three measurement decompositions (PO / SD / FD), each validated against exact expectation values
-- Anisotropic effective masses and optional sine-bump electrostatic potentials
-- First excited states by deflation, with the overlap measured on hardware-executable circuits
-- Parameter-shift gradients with Adam, and any `scipy.optimize.minimize` method for comparison
-- In-loop readout correction and zero-noise extrapolation
-- Ideal, IBM-calibration-noise, and live-hardware execution behind one interface
+* Quantum-classical VQA framework for semiconductor quantum confinement problems in 1D, 2D, and 3D
+* Three Hamiltonian measurement decompositions (PO / SD / FD), benchmarked against exact expectation values
+* Anisotropic effective masses and configurable electrostatic potentials
+* Ground and first excited states, with excited states computed by variational quantum deflation (VQD) using hardware-executable overlap measurements
+* Parameter-shift gradients with Adam, with SciPy-based optimizers available for comparison
+* In-loop readout correction and zero-noise extrapolation (ZNE)
+* Ideal statevector simulation, calibrated IBM device-noise emulation, and IBM Quantum hardware execution through a common interface
 
 ---
+
 
 ## Repository Structure
 
