@@ -1,24 +1,28 @@
 # QConfLib
 
-QConfLib is a hybrid quantum-classical solver for the quantum-confinement eigenproblem in semiconductor nanostructures. The confinement Hamiltonian is discretized on a uniform grid, the trial wavefunction is encoded in a hardware-efficient ansatz, and the ground-state energy is minimized with a classical optimizer. Quantum wells (1D), nanowire cross sections (2D), and quantum dots (3D) are supported, along with first excited states.
+**QConfLib** is an open-source Python library for quantum-computing-based simulation of quantum confinement in semiconductor nanostructures. Built on **Qiskit**, it implements variational quantum algorithms for solving the discretized effective-mass Schrödinger equation in **one, two, and three dimensions**, including quantum wells (1D), nanowire cross sections (2D), and quantum dots (3D). Both ground and first excited states are supported, together with anisotropic effective masses and spatially varying electrostatic potentials.
 
-Three measurement decompositions of the confinement Hamiltonian are implemented and benchmarked against each other:
+The confinement Hamiltonian is discretized on a uniform finite-difference grid and encoded using a qubit register whose size grows logarithmically with the number of grid points. The trial wave function is represented by a hardware-efficient parameterized quantum circuit, and its energy is minimized through a quantum-classical variational optimization procedure. Excited states are obtained using variational quantum deflation (VQD).
 
-- **PO** (Permutation Operator), following *Sato et al. (2021)*, using an increment circuit to shift the grid index.
-- **SD** (Sparse Decomposition), splitting the operator into `n` shallow CX-ladder circuits.
-- **FD** (Fourier Diagonalization), diagonalizing the hopping term with an LNN-optimized QFT and a Hadamard test.
+QConfLib implements three approaches for measuring the kinetic-energy contribution to the confinement Hamiltonian:
 
-Execution targets an ideal statevector simulator, a density-matrix simulator carrying a real IBM calibration snapshot, or a live IBM device.
+* **PO (Permutation Operator):** uses a cyclic-shift/increment circuit to evaluate nearest-neighbor couplings.
+* **SD (Sparse Decomposition):** decomposes the kinetic operator into `n` sparse components measured using shallow CNOT-ladder circuits.
+* **FD (Fourier Diagonalization):** uses a quantum Fourier transform (QFT) to diagonalize the periodic kinetic operator, together with a Hadamard test and a correction for the Dirichlet boundary condition.
 
-This implementation is based on the following publications:
+These methods provide different tradeoffs between **circuit depth and number of measurement circuits**, enabling systematic benchmarking under both sampling noise and realistic quantum-device noise.
 
-> **Ning Yang, Jing Guo** (2023). *A quantum-computing-based method for solving the quantum confinement problem in semiconductors*.
+A common execution interface allows the same confinement problem to be run on an **ideal statevector simulator**, a **calibrated device-noise emulator based on IBM hardware properties**, or **real IBM quantum processors**. QConfLib also supports hardware-aware optimization and in-loop noise-mitigation techniques, providing a reproducible platform for developing and benchmarking quantum algorithms for semiconductor quantum-confinement simulation.
 
-> **Yuki Sato, Ruho Kondo, Satoshi Koide, Hideki Takamatsu, Nobuyuki Imoto** (2021). *Variational quantum algorithm based on the minimum potential energy for solving the Poisson equation*.
+This implementation builds on and extends the following works:
 
-> **Hai-Ling Liu, Yu-Sen Wu, Lin-Chun Wan, Shi-Jie Pan, Su-Juan Qin, Fei Gao, Qiao-Yan Wen** (2021). *Variational quantum algorithm for the Poisson equation*.
+> **Ning Yang and Jing Guo** (2023). *A Quantum-Computing-Based Method for Solving Quantum Confinement Problem in Semiconductor*. IEEE Transactions on Electron Devices, 70(3), 1366–1373.
 
-> **Dongyun Chung, Jiyong Choi, Jung-Il Choi** (2026). *VQA_POISSON: A Quantum Library for Solving Two-Dimensional Poisson Equations with Mixed Boundary Conditions*.
+> **Yuki Sato, Ruho Kondo, Satoshi Koide, Hideki Takamatsu, and Nobuyuki Imoto** (2021). *Variational Quantum Algorithm Based on the Minimum Potential Energy for Solving the Poisson Equation*.
+
+> **Hai-Ling Liu, Yu-Sen Wu, Lin-Chun Wan, Shi-Jie Pan, Su-Juan Qin, Fei Gao, and Qiao-Yan Wen** (2021). *Variational Quantum Algorithm for the Poisson Equation*.
+
+> **Dongyun Chung, Jiyong Choi, and Jung-Il Choi** (2026). *VQA_POISSON: A Quantum Library for Solving Two-Dimensional Poisson Equations with Mixed Boundary Conditions*.
 
 ---
 
